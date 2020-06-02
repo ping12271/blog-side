@@ -483,6 +483,8 @@ body {
       display: flex; }
       #header .container .main-header nav .header-menu li {
         color: #fff; }
+        #header .container .main-header nav .header-menu li ul {
+          display: none; }
         #header .container .main-header nav .header-menu li a {
           color: #fff;
           padding: 20px 30px;

@@ -29,6 +29,9 @@
           display: flex;
           li {
             color: #fff;
+            ul {
+              display: none;
+            }
             a {
               color: #fff;
               padding: 20px 30px;
