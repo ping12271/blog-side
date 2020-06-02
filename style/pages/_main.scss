@@ -121,6 +121,10 @@ main {
             background-color: #fff;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
             border-radius: 6px;
+            transition: 0.3s;
+            &:hover {
+              box-shadow: 1px 2px 15px rgba(115, 0, 255, 0.2);
+            }
             img {
               border-radius: 6px;
               cursor: pointer;
