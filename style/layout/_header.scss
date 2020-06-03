@@ -23,6 +23,20 @@
       height: 84px;
       justify-content: space-between;
       align-items: center;
+      .logo {
+        .get-scroll & {
+          .scroll-logo {
+            display: block;
+          }
+          .main-logo {
+            display: none;
+          }
+        }
+        .scroll-logo {
+          display: none;
+        }
+      }
+
       nav {
           ul {
             display: flex;

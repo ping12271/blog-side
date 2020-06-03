@@ -476,6 +476,12 @@ body {
     height: 84px;
     justify-content: space-between;
     align-items: center; }
+    .get-scroll #header .container .main-header .logo .scroll-logo {
+      display: block; }
+    .get-scroll #header .container .main-header .logo .main-logo {
+      display: none; }
+    #header .container .main-header .logo .scroll-logo {
+      display: none; }
     #header .container .main-header nav ul {
       display: flex; }
       #header .container .main-header nav ul li a {
