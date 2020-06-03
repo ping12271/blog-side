@@ -3,6 +3,20 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1000;
+  .get-scroll & {
+    position: fixed;
+    top: 0;
+    transform: translateY(-120%);
+    background-color: #fff;
+    box-shadow: 0 2px 15px rgba(0,0,0, 0.2);
+  }
+  .show-header & {
+    transition: 0.3s;
+    transform: none;
+  }
+
+
   .container {
     .main-header {
       display: flex;
@@ -10,55 +24,21 @@
       justify-content: space-between;
       align-items: center;
       nav {
-        .header-menu {
-          display: flex;
-          li {
-            color: #fff;
-            ul {
-              display: none;
-            }
-            a {
-              color: #fff;
-              padding: 20px 30px;
-              font-size: 14px;
-              cursor: pointer;
+          ul {
+            display: flex;
+            li {
+              a {
+                color: #fff;
+                padding: 20px 30px;
+                font-size: 14px;
+                cursor: pointer;
+                .show-header & {
+                  color: #333;
+                }
+              }
             }
           }
         }
       }
     }
-  }
-}
-
-.visual {
-  position: relative;
-  width: 100%;
-  height: 40vh;
-  background-image: url('../images/blog-5.jpg');
-  background-position: center;
-  background-size: cover;
-  z-index: -2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .screen {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);
-    opacity: 0.94;
-    z-index: -1;
-  }
-}
-.header-title {
-  text-align: center;
-  color: #fff;
-  h1 {
-    font-size: 50px;
-    margin-bottom: 60px;
-  }
-  p {
-  }
 }

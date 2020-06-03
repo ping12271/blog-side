@@ -10,17 +10,51 @@ h2 {
   font-weight: 600;
   line-height: 1.2;
 }
+.visual {
+  position: relative;
+  height: 40vh;
+  background-image: url('../images/blog-5.jpg');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .screen {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(-47deg, #8731E8 0%, #4528DC 100%);
+    opacity: 0.94;
+  }
+  .visual-title {
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+  }
+}
 main {
-  margin: 100px 0;
+  padding: 100px 0;
+
   .container {
     display: flex;
     justify-content: space-between;
     @include screen-sm {
-        flex-direction: column;
+      flex-direction: column;
     }
+
     .sidebar-contents {
       padding: 15px;
       flex: 1;
+
       input {
         width: 290px;
         height: 50px;
@@ -28,72 +62,68 @@ main {
         padding: 10px;
         border: none;
       }
-      .sidebar-list {
-        border: 1px solid rgba(153, 153, 153, 0.36);
-        border-top: none;
+
+      .sidebar-item {
         margin-top: 30px;
-        li {
-          &:first-child {
-            border-top: 1px solid rgba(153, 153, 153, 0.36);
-            padding: 16px;
-            cursor: pointer;
+
+        h3 {
+          border: 1px solid rgba(153, 153, 153, 0.17);
+          padding: 16px;
+          cursor: pointer;
+        }
+
+        ul {
+          border: 1px solid rgba(153, 153, 153, 0.17);
+          border-top: none;
+          border-bottom: none;
+
+          li {
+            border: 1px solid rgba(153, 153, 153, 0.17);
           }
-          a {
-            display: flex;
-            padding: 16px;
-            border-top: 1px solid rgba(153, 153, 153, 0.36);
-            &:hover {
-              background-color: rgba(153, 153, 153, 0.12);
-              border-left: 2px solid #6f42c1;
-            }
+        }
+      }
+
+      .categories {
+        a {
+          display: flex;
+          padding: 15px;
+          border-left: 3px solid transparent;
+          &:hover {
+            background-color: rgba(153, 153, 153, 0.12);
+            border-color: #6f42c1;
           }
         }
       }
       .post {
-        margin-top: 30px;
-        ul {
-          border: 1px solid rgba(153, 153, 153, 0.36);
-          border-top: none;
-          li {
-            border-top: 1px solid rgba(153, 153, 153, 0.36);
-            h3 {
-              padding: 16px;
-            }
-            .post-item {
-              display: flex;
-              padding: 16px;
-              &:hover {
-                background-color: rgba(153, 153, 153, 0.12);
-                border-left: 2px solid #6f42c1;
-              }
-              img {
-                width: 64px;
-                height: 64px;
-              }
-              .post-desc {
-                padding-left: 16px;
-                span {
-                  color: #777;
-                }
-                p {
-                  margin-top: 10px;
-                }
-              }
+        .post-item {
+          display: flex;
+          padding: 16px;
+          border-left: 3px solid transparent;
+          &:hover {
+            background-color: rgba(153, 153, 153, 0.12);
+            border-color: #6f42c1;
+          }
+          img {
+            width: 64px;
+            height: 64px;
+          }
+          .post-desc {
+            padding-left: 16px;
+            p {
+              color: #777;
+              margin-bottom: 10px;
             }
           }
         }
       }
       .tags {
-        margin-top: 25px;
         h3 {
-          padding: 16px;
-          border-bottom: 1px solid rgba(153, 153, 153, 0.36);
-          margin-bottom: 20px;
-          cursor: pointer;
+          border: 0;
+          border-bottom: 1px solid rgba(153, 153, 153, 0.12);
         }
         a {
           display: inline-block;
-          border: 1px solid rgba(153, 153, 153, 0.36);
+          border: 1px solid rgba(153, 153, 153, 0.12);
           border-radius: 5px;
           padding: 5px;
           margin: 5px 0;
@@ -103,12 +133,14 @@ main {
     }
     .main-contents {
       flex: 3;
+
       .main-items {
         display: flex;
         flex-wrap: wrap;
         @include screen-sm {
           flex-direction: column;
         }
+
         li {
           flex: 1 1 50%;
           max-width: 50%;
@@ -117,29 +149,36 @@ main {
             flex: 1 1 100%;
             max-width: 100%;
           }
+
           .main-item {
             background-color: #fff;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
             border-radius: 6px;
             transition: 0.3s;
+
             &:hover {
-              box-shadow: 1px 2px 15px rgba(115, 0, 255, 0.2);
+              box-shadow: 1px 2px 20px rgba(75, 67, 85, 0.2);
             }
+
             img {
               border-radius: 6px;
               cursor: pointer;
             }
+
             .desc {
               padding: 20px 20px 30px 20px;
+
               .name-date {
                 margin: 20px 0;
                 display: flex;
                 justify-content: space-between;
               }
+
               h2:hover {
                 color: #6f42c1;
                 cursor: pointer;
               }
+
               p {
                 margin: 30px 0;
                 line-height: 1.5;
@@ -148,12 +187,15 @@ main {
           }
         }
       }
+
       .pagination {
         display: flex;
         justify-content: center;
         align-items: center;
+
         li {
           padding: 10px;
+
           a {
             width: 40px;
             height: 40px;
@@ -167,4 +209,20 @@ main {
       }
     }
   }
+}
+
+.back-top {
+  position: fixed;
+  right: 50px;
+  bottom: 80px;
+  width: 40px;
+  height: 45px;
+  border-radius: 5px;
+  background-color: rgba(36, 36, 36, 0.5);
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
