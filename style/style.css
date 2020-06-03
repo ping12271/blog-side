@@ -666,7 +666,7 @@ main {
 .back-top {
   position: fixed;
   right: 50px;
-  bottom: 80px;
+  bottom: -50px;
   width: 40px;
   height: 45px;
   border-radius: 5px;
@@ -677,5 +677,8 @@ main {
   justify-content: center;
   align-items: center;
   cursor: pointer; }
+  .show-header .back-top {
+    transition-delay: 1s;
+    bottom: 50px; }
 
 /*# sourceMappingURL=style.css.map */
