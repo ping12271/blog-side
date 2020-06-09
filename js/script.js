@@ -7,11 +7,26 @@ $(function () {
 
 const blog = {
     init: function () {
+        blog.handleSideMenu()
         blog.toggleSlideMenu()
         blog.getScroll()
-        blog.backTop()
-        blog.visualSlide();
+        blog.backTop();
     },
+
+    handleSideMenu: function () {
+        $('.btn-menu').on('click', function () {
+            $('.html').addClass('open-side-menu');
+        })
+        $('.screen').on('click', function () {
+            $('.html').removeClass('open-side-menu');
+        })
+    },
+
+
+
+
+
+
     toggleSlideMenu: function () {
         $('.sidebar-item').on('click', function () {
             $(this).find('ul, .tags-list').slideToggle();
@@ -34,7 +49,6 @@ const blog = {
           }
       })
     },
-
 
     backTop: function () {
         $('.back-top').on('click', function () {

@@ -40,6 +40,9 @@
       nav {
           ul {
             display: flex;
+            @include screen-sm {
+              display: none;
+            }
             li {
               a {
                 color: #fff;
@@ -52,6 +55,56 @@
               }
             }
           }
+        }
+      .btn-menu {
+        font-size: 26px;
+        color: #fff;
+        cursor: pointer;
+        display: none;
+        @include screen-sm {
+          display: block;
+          color: #fff;
+          margin-right: 15px;
+        }
+        .show-header & {
+          color: #333;
+        }
+      }
+    }
+  }
+    .side-header {
+      nav {
+        ul {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          right: -300px;
+          background-color: #fff;
+          width: 250px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .open-side-menu & {
+            right: 0;
+          }
+          li {
+            padding: 20px;
+            margin-top: 20px;
+          }
+        }
+      }
+      .screen {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(255,255,255, 0.7);
+        display: none;
+        .open-side-menu & {
+          display: block;
         }
       }
     }
