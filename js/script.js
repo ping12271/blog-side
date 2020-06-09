@@ -15,10 +15,10 @@ const blog = {
 
     handleSideMenu: function () {
         $('.btn-menu').on('click', function () {
-            $('.html').addClass('open-side-menu');
+            $('html').addClass('open-side-menu');
         })
         $('.screen').on('click', function () {
-            $('.html').removeClass('open-side-menu');
+            $('html').removeClass('open-side-menu');
         })
     },
 
