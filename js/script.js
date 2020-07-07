@@ -24,12 +24,12 @@ const blog = {
 
 
     toggleSlideMenu: function () {
-        $('.sidebar-item').on('click', function () {
-            $(this).find('ul, .tags-list').slideToggle();
+        $('.sidebar-item h3').on('click', function () {
+            $(this).next('ul, .tags-list').slideToggle();
         });
 
-        $('.side-header li').on('click', function () {
-            $(this).find('.dropdown').slideToggle();
+        $('.side-header .name').on('click', function () {
+            $(this).next('.dropdown').slideToggle();
         });
     },
 
