@@ -2,11 +2,12 @@ body {
   color: #333;
 }
 h3 {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
+  color: #444;
 }
 h2 {
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.2;
 }
@@ -58,7 +59,7 @@ main {
       input {
         width: 290px;
         height: 50px;
-        background-color: rgba(153, 153, 153, 0.17);
+        background-color: #f7f7f7;
         padding: 10px;
         border: none;
       }
@@ -88,6 +89,7 @@ main {
           display: flex;
           padding: 15px;
           border-left: 3px solid transparent;
+          font-size: 14px;
           &:hover {
             background-color: rgba(153, 153, 153, 0.12);
             border-color: #6f42c1;
@@ -109,9 +111,11 @@ main {
           }
           .post-desc {
             padding-left: 16px;
+            font-size: 14px;
             p {
               color: #777;
               margin-bottom: 10px;
+              font-size: 13px;
             }
           }
         }
@@ -128,6 +132,7 @@ main {
           padding: 5px;
           margin: 5px 0;
           cursor: pointer;
+          font-size: 12px;
         }
       }
     }
@@ -167,7 +172,8 @@ main {
 
             .desc {
               padding: 20px 20px 30px 20px;
-
+              font-size: 14px;
+              color: #444;
               .name-date {
                 margin: 20px 0;
                 display: flex;
@@ -192,18 +198,30 @@ main {
         display: flex;
         justify-content: center;
         align-items: center;
-
         li {
-          padding: 10px;
-
+          padding: 5px;
           a {
             width: 40px;
             height: 40px;
+            border: 1px solid rgba(153, 153, 153, 0.36);
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 1px solid rgba(153, 153, 153, 0.36);
             cursor: pointer;
+            font-size: 14px;
+            &.em {
+              border: none;
+              &:hover {
+                .fa-arrow-left {
+                  transition: .5s;
+                  transform: translateX(-5px);
+                }
+                .fa-arrow-right {
+                  transition: .5s;
+                  transform: translateX(5px);
+                }
+              }
+            }
           }
         }
       }
