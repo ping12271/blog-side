@@ -140,7 +140,6 @@
           li {
             border-bottom: 1px solid rgba(119, 119, 119, 0.22);
             width: 320px;
-            height: 49px;
             a {
               height: 49px;
               display: flex;
@@ -154,8 +153,11 @@
             }
             .dropdown {
               background-color: #fff;
+              display: none;
               a {
                 display: flex;
+                font-weight: 600;
+                font-size: 14px;
               }
             }
           }

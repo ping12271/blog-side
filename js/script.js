@@ -23,14 +23,14 @@ const blog = {
     },
 
 
-
-
-
-
     toggleSlideMenu: function () {
         $('.sidebar-item').on('click', function () {
             $(this).find('ul, .tags-list').slideToggle();
-        })
+        });
+
+        $('.side-header li').on('click', function () {
+            $('.side-header .dropdown').slideToggle();
+        });
     },
 
     getScroll: function () {

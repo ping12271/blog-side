@@ -659,7 +659,6 @@ body {
 #header .side-header nav ul li {
   border-bottom: 1px solid rgba(119, 119, 119, 0.22);
   width: 320px;
-  height: 49px;
 }
 #header .side-header nav ul li a {
   height: 49px;
@@ -674,9 +673,12 @@ body {
 }
 #header .side-header nav ul li .dropdown {
   background-color: #fff;
+  display: none;
 }
 #header .side-header nav ul li .dropdown a {
   display: flex;
+  font-weight: 600;
+  font-size: 14px;
 }
 #header .side-header .screen {
   position: fixed;
