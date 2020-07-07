@@ -29,7 +29,7 @@ const blog = {
         });
 
         $('.side-header li').on('click', function () {
-            $('.side-header .dropdown').slideToggle();
+            $(this).find('.dropdown').slideToggle();
         });
     },
 
