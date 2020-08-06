@@ -51,7 +51,6 @@ main {
     @include screen-sm {
       flex-direction: column;
     }
-
     .sidebar-contents {
       padding: 15px;
       flex: 1;
@@ -137,39 +136,37 @@ main {
       }
     }
     .main-contents {
-      flex: 3;
-
-      .main-items {
+      flex: 2;
+      ul.main-items {
         display: flex;
         flex-wrap: wrap;
         @include screen-sm {
           flex-direction: column;
         }
-
         li {
-          flex: 1 1 50%;
+          flex: 50%;
           max-width: 50%;
           padding: 15px;
-          @include screen-sm {
-            flex: 1 1 100%;
+          @include screen-md {
+            flex: 100%;
             max-width: 100%;
           }
-
+          @include screen-sm {
+            flex: 100%;
+            max-width: 100%;
+          }
           .main-item {
             background-color: #fff;
             box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
             border-radius: 6px;
             transition: 0.3s;
-
             &:hover {
               box-shadow: 1px 2px 20px rgba(75, 67, 85, 0.2);
             }
-
             img {
               border-radius: 6px;
               cursor: pointer;
             }
-
             .desc {
               padding: 20px 20px 30px 20px;
               font-size: 14px;
@@ -179,12 +176,10 @@ main {
                 display: flex;
                 justify-content: space-between;
               }
-
               h2:hover {
                 color: #6f42c1;
                 cursor: pointer;
               }
-
               p {
                 margin: 30px 0;
                 line-height: 1.5;
@@ -231,10 +226,10 @@ main {
 
 .back-top {
   position: fixed;
-  right: 50px;
+  right: 20px;
   bottom: -50px;
   width: 40px;
-  height: 45px;
+  height: 40px;
   border-radius: 5px;
   background-color: rgba(36, 36, 36, 0.5);
   color: #fff;

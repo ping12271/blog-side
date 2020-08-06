@@ -803,56 +803,62 @@ main .container .sidebar-contents .tags a {
   font-size: 12px;
 }
 main .container .main-contents {
-  flex: 3;
+  flex: 2;
 }
-main .container .main-contents .main-items {
+main .container .main-contents ul.main-items {
   display: flex;
   flex-wrap: wrap;
 }
 @media only screen and (max-width: 768px) {
-  main .container .main-contents .main-items {
+  main .container .main-contents ul.main-items {
     flex-direction: column;
   }
 }
-main .container .main-contents .main-items li {
-  flex: 1 1 50%;
+main .container .main-contents ul.main-items li {
+  flex: 50%;
   max-width: 50%;
   padding: 15px;
 }
-@media only screen and (max-width: 768px) {
-  main .container .main-contents .main-items li {
-    flex: 1 1 100%;
+@media only screen and (max-width: 992px) {
+  main .container .main-contents ul.main-items li {
+    flex: 100%;
     max-width: 100%;
   }
 }
-main .container .main-contents .main-items li .main-item {
+@media only screen and (max-width: 768px) {
+  main .container .main-contents ul.main-items li {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+main .container .main-contents ul.main-items li .main-item {
   background-color: #fff;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   transition: 0.3s;
 }
-main .container .main-contents .main-items li .main-item:hover {
+main .container .main-contents ul.main-items li .main-item:hover {
   box-shadow: 1px 2px 20px rgba(75, 67, 85, 0.2);
 }
-main .container .main-contents .main-items li .main-item img {
+main .container .main-contents ul.main-items li .main-item img {
   border-radius: 6px;
   cursor: pointer;
 }
-main .container .main-contents .main-items li .main-item .desc {
+main .container .main-contents ul.main-items li .main-item .desc {
   padding: 20px 20px 30px 20px;
   font-size: 14px;
   color: #444;
 }
-main .container .main-contents .main-items li .main-item .desc .name-date {
+main .container .main-contents ul.main-items li .main-item .desc .name-date {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;
 }
-main .container .main-contents .main-items li .main-item .desc h2:hover {
+main .container .main-contents ul.main-items li .main-item .desc h2:hover {
   color: #6f42c1;
   cursor: pointer;
 }
-main .container .main-contents .main-items li .main-item .desc p {
+main .container .main-contents ul.main-items li .main-item .desc p {
   margin: 30px 0;
   line-height: 1.5;
 }
@@ -888,10 +894,10 @@ main .container .main-contents .pagination li a.em:hover .fa-arrow-right {
 
 .back-top {
   position: fixed;
-  right: 50px;
+  right: 20px;
   bottom: -50px;
   width: 40px;
-  height: 45px;
+  height: 40px;
   border-radius: 5px;
   background-color: rgba(36, 36, 36, 0.5);
   color: #fff;

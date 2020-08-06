@@ -30,6 +30,7 @@ const blog = {
 
         $('.side-header .name').on('click', function () {
             $(this).next('.dropdown').slideToggle();
+            $(this).closest('li').siblings().find('.dropdown').slideUp();
         });
     },
 
